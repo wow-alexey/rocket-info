@@ -11,10 +11,15 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #fff;
-    width: rem-calc(134);
-    height: rem-calc(50);
+    width: rem-calc(132);
+    height: rem-calc(40);
     @include hideText;
   }
+}
+
+.burger {
+  @include hideText;
+  @include burger(30, 20, 4);
 }
 
 .user-area {

@@ -6,12 +6,12 @@ body {
   margin: 0;
   color: $black;
   overflow-x: hidden;
-  font-size: rem-calc(12);
-  letter-spacing: rem-calc(.59);
+  font-size: rem-calc(14);
+  letter-spacing: rem-calc(.7);
   font-family: $avenir;
   background: $default-bg;
   @include breakpoint(medium) {
-    font-size: rem-calc(14);
+    font-size: rem-calc(16);
   }
 }
 
@@ -55,6 +55,14 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 700;
   letter-spacing: rem-calc(.51);
   color: inherit;
+}
+.h1, h1 {
+  font-size: rem-calc(31);
+  letter-spacing: rem-calc(1.45);
+  color: $new-black ;
+  @include breakpoint(large) {
+
+  }
 }
 
 .h2, h2 {
