@@ -1,0 +1,243 @@
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  color: $black;
+  overflow-x: hidden;
+  font-size: rem-calc(12);
+  letter-spacing: rem-calc(.59);
+  font-family: $avenir;
+  background: $default-bg;
+  @include breakpoint(medium) {
+    font-size: rem-calc(14);
+  }
+}
+
+header,main,footer {
+  max-width: 100%;
+  transition: margin $transition;
+}
+
+header {
+  background: $white;
+  padding: rem-calc(9 0);
+  border-bottom: rem-calc(1) solid $header-border;
+  margin-bottom: rem-calc(35);
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+main {
+  background: $white;
+}
+
+mark {
+  background: none;
+  font-weight: $bold;
+}
+
+footer {
+  background: $default-bg;
+  padding: rem-calc(34 0);
+  font-size: rem-calc(13);
+  font-weight: $bold;
+  color: $footer-color;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 700;
+  letter-spacing: rem-calc(.51);
+  color: inherit;
+}
+
+.h2, h2 {
+  font-size: rem-calc(18);
+  line-height: rem-calc(20);
+  text-transform: uppercase;
+  @include breakpoint(large) {
+    font-size: rem-calc(28);
+    line-height: rem-calc(31);
+  }
+}
+
+.h3, h3 {
+  font-size: rem-calc(15);
+  line-height: 1.3;
+  @include breakpoint(medium) {
+    font-size: rem-calc(16);
+  }
+  @include breakpoint(large) {
+    line-height: 1.1;
+    font-size: rem-calc(20);
+  }
+}
+
+.h4, h4 {
+  font-size: rem-calc(17);
+  line-height: rem-calc(18);
+  margin-bottom: rem-calc(8);
+  @include breakpoint(medium) {
+    margin-bottom: rem-calc(15);
+    font-size: rem-calc(22);
+    line-height: 1.2;
+    max-width: rem-calc(422);
+  }
+  @include breakpoint(large) {
+    margin-bottom: rem-calc(15);
+  }
+
+}
+
+.h5, h5 {
+  font-size: rem-calc(16);
+  text-align: center;
+  margin-bottom: rem-calc(10);
+  @include breakpoint(large) {
+    text-align: left;
+  }
+}
+
+input, textarea{
+  outline: none;
+  background: $white;
+  border: 0;
+  border-radius: rem-calc(4);
+  padding: rem-calc(8 10 8 15);
+  font-size: rem-calc(13);
+  width: 100%;
+  box-sizing: border-box;
+  //box-shadow: $box-shadow;
+  border: rem-calc(1) solid rgba(0,0,0,.15);
+  letter-spacing: rem-calc(.56);
+  font-family: $avenir;
+  transition: all $slow-transition;
+  @include placeholder() {
+    color: $input-color;
+  }
+  &:focus {
+    border-color: #656565;
+  }
+}
+
+textarea {
+  height: rem-calc(75);
+  resize: none;
+}
+
+.button.green-btn, button.green-btn {
+  cursor: pointer;
+  outline: none;
+  background: $green;
+  color: $white;
+  min-width: rem-calc(220);
+  border-radius: rem-calc(4);
+  padding: rem-calc(9 23);
+  text-align: center;
+  font-family: $avenir;
+  font-size: rem-calc(11);
+  font-weight: $bold;
+  border: transparent;
+  letter-spacing: rem-calc(.47);
+  transition: background-color $transition;
+  &:hover {
+    background: rgba($green, .7);
+  }
+
+}
+
+.has-sidebar {
+  display: flex;
+  main {
+    width: calc(80% - 20px);
+  }
+}
+
+aside {
+  border: rem-calc(1) solid #dfdfdf;
+  background: #e5e5e5;
+  margin-right: rem-calc(20);
+  width: 20%;
+  ul {
+    width: 100%;
+    background: $white;
+  }
+  .image-holder {
+    position: absolute;
+    top: 50%;
+    left: rem-calc(25);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: rem-calc(24);
+    height: rem-calc(24);
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+  li {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    border-bottom: rem-calc(1) solid $default-border;
+    &:first-of-type {
+      background: #e5e5e5;
+      padding: rem-calc(6 10);
+      a {
+        background: $purple;
+        color: $white;
+        padding: rem-calc(14 15 14 62);
+        &:hover {
+          background: rgba($purple, .7);
+        }
+      }
+      &.current {
+        a {
+          background: $purple;
+          color: $white;
+          &:after {
+            display: none;
+          }
+          &:hover {
+            background: $purple;
+          }
+        }
+      }
+    }
+    &.current {
+      a {
+        color: $purple;
+        position: relative;
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: rem-calc(4);
+          height: 100%;
+          background: $purple;
+        }
+        &:hover {
+          cursor: auto;
+          background: $white;
+        }
+      }
+    }
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: rem-calc(14 15 14 73);
+      font-size: rem-calc(13);
+      border-radius: rem-calc(3);
+      transition: all $transition;
+      &:hover {
+        background: #f3f3f3;
+      }
+    }
+  }
+}

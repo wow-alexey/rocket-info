@@ -1,0 +1,37 @@
+@@include('templates/head.html', {
+"title": "Step 4 | Rocket"
+})
+@@include('templates/header.html')
+<div class="container">
+    <main>
+        @@include('templates/top-form.html')
+        <div class="main-content-holder">
+            @@include('templates/priority-block.html')
+            <div class="tabs-holder">
+                <div class="invitation-block">
+                    <p>Your Priority Has the Roles of Project Manager, Developer and Sales manager.
+                        Let’s Invite them to share their POV</p>
+                    <div class="story">
+                        <div class="title">User Story</div>
+                        <div class="action-holder">
+                            <input type="text" placeholder="sample@example.com">
+                            <button class="green-btn">Invite Project manager</button>
+                        </div>
+                        <div class="action-holder">
+                            <input type="text" placeholder="sample@example.com">
+                            <button class="green-btn">Invite Developer</button>
+                        </div>
+                        <div class="action-holder">
+                            <input type="text" placeholder="sample@example.com">
+                            <button class="green-btn">Invite Sales Manager</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-holder">
+                    <button class="green-btn">Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+@@include('templates/footer.html')
