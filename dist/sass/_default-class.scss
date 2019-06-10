@@ -6,12 +6,12 @@ body {
   margin: 0;
   color: $black;
   overflow-x: hidden;
-  font-size: rem-calc(14);
-  letter-spacing: rem-calc(.7);
+  font-size: rem-calc(12);
+  letter-spacing: rem-calc(.59);
   font-family: $avenir;
   background: $default-bg;
   @include breakpoint(medium) {
-    font-size: rem-calc(16);
+    font-size: rem-calc(14);
   }
 }
 
@@ -55,14 +55,6 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 700;
   letter-spacing: rem-calc(.51);
   color: inherit;
-}
-.h1, h1 {
-  font-size: rem-calc(31);
-  letter-spacing: rem-calc(1.45);
-  color: $new-black ;
-  @include breakpoint(large) {
-
-  }
 }
 
 .h2, h2 {
@@ -158,6 +150,18 @@ textarea {
     background: rgba($green, .7);
   }
 
+  &.disabled,&:disabled{
+	background: #b4b4b4;
+  }
+}
+
+.btn-primary{
+  background: $green;
+  border-color: $green;
+
+  &:hover{
+	background: darken($green, 0.1);
+  }
 }
 
 .has-sidebar {
@@ -199,7 +203,7 @@ aside {
       a {
         background: $purple;
         color: $white;
-        padding: rem-calc(14 15 14 62);
+        padding: rem-calc(14 15 14 25);
         &:hover {
           background: rgba($purple, .7);
         }
@@ -237,15 +241,22 @@ aside {
       }
     }
     a {
-      display: inline-block;
+	  display: flex;
+	  align-items: center;
       width: 100%;
-      padding: rem-calc(14 15 14 73);
+      padding: rem-calc(14 15 14 15);
       font-size: rem-calc(13);
       border-radius: rem-calc(3);
       transition: all $transition;
+	  
       &:hover {
         background: #f3f3f3;
       }
+	  
+	  span{
+		font-size: 24px;
+		margin-right: 24px;
+	  }
     }
   }
 }

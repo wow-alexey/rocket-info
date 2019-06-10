@@ -1,0 +1,80 @@
+.priority-info {
+  font-size: rem-calc(16);
+  header {
+    border-bottom: rem-calc(1) solid $header-border;
+    button, .button {
+      background: $deep-red;
+    }
+  }
+  .logo {
+    a {
+      width: rem-calc(132);
+      height: rem-calc(40);
+    }
+  }
+  button, .button {
+    letter-spacing: rem-calc(.75);
+    border-radius: rem-calc(3);
+    border: 0;
+    font-weight: $bold;
+    line-height: rem-calc(42);
+    height: rem-calc(42);
+    padding: 0 rem-calc(25);
+    color: $white;
+  }
+  .burger {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 19px;
+    font-size: 0;
+    //display: none;
+    &.active {
+      .burger-inner {
+        opacity: 0;
+        right: 50%;
+        transform: translateY(-50%) translateX(50%);
+      }
+      &:before {
+        top: calc(50% - 1.5px);
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &:after {
+        bottom: calc(50% - 1.5px);
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: $black;
+      left: 0;
+      transition: top $transition,
+      left $transition,
+      bottom $transition,
+      transform $transition;
+    }
+    &:before {
+      top: 0;
+    }
+    &:after {
+      bottom: 0;
+    }
+    .burger-inner {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 50%;
+      height: 3px;
+      background: $black;
+      transform: translateY(-50%);
+      opacity: 1;
+      transition: opacity $slow-transition, right $transition, transform $transition;
+    }
+  }
+}

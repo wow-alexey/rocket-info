@@ -47,11 +47,20 @@
   margin-left: auto;
   margin-right: auto;
   @include breakpoint(medium){
-    max-width: rem-calc(970);
+    max-width: rem-calc(940);
   }
-  @include breakpoint(xxlarge){
+  @include breakpoint(large){
     max-width: rem-calc(1024);
   }
+  @include breakpoint(xlarge){
+    max-width: rem-calc(1100);
+  }
+  //@include breakpoint(xxlarge){
+  //  max-width: rem-calc(1400);
+  //}
+  //@include breakpoint(xxxlarge){
+  //  max-width: rem-calc(1650);
+  //}
 }
 
 @mixin hideText {
@@ -73,7 +82,6 @@
     width: 100%;
     height: rem-calc($lineHeight);
     transform: translateX(-50%);
-    transition: transform $fast-transition, top $fast-transition;
   }
   &:after {
     top: 0;
@@ -90,7 +98,6 @@
     height: rem-calc($lineHeight);
     transform: translate(-50%, 0);
     margin-top: calc(#{$lineHeight}px / -2);
-    transition: opacity $fast-transition;
   }
 
   &.opened {
@@ -124,4 +131,16 @@
   &:-ms-input-placeholder {
     @content
   }
+}
+
+// =============================================================================
+// Appearance
+// =============================================================================
+
+@mixin appearance($value: none) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  -ms-appearance: $value;
+  -o-appearance: $value;
+  appearance: $value;
 }

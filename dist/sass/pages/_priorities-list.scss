@@ -1,0 +1,54 @@
+.list-group.priorities {
+  display: table;
+  width: 100%;
+
+  & > li {
+	display: table-row;
+
+	& > * {
+	  @extend %list-group-item;
+
+	  position: static;
+	  display: table-cell;
+	  vertical-align: middle;
+
+	  &:not(:first-child) {
+		border-left: 0;
+	  }
+
+	  &:not(:last-child) {
+		border-right: 0;
+	  }
+	}
+
+	&:not(:first-child) {
+	  & > * {
+		border-top: 0;
+	  }
+	}
+
+	&:first-child{
+	  & > * {
+		&:first-child{
+		  border-top-left-radius: $list-group-borer-radius;
+		}
+
+		&:last-child{
+		  border-top-right-radius: $list-group-borer-radius;
+		}
+	  }
+	}
+
+	&:last-child{
+	  & > * {
+		&:first-child{
+		  border-bottom-left-radius: $list-group-borer-radius;
+		}
+
+		&:last-child{
+		  bottom: $list-group-borer-radius;
+		}
+	  }
+	}
+  }
+}

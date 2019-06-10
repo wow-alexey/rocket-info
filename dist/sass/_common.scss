@@ -5,21 +5,16 @@
 .logo {
   display: inline-block;
   a {
-    display: inline-block;
-    background: url("../img/logo.svg");
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-color: #fff;
-    width: rem-calc(132);
-    height: rem-calc(40);
-    @include hideText;
+	display: inline-block;
+	background: url("../img/logo.svg");
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: #fff;
+	width: rem-calc(134);
+	height: rem-calc(50);
+	@include hideText;
   }
-}
-
-.burger {
-  @include hideText;
-  @include burger(30, 20, 4);
 }
 
 .user-area {
@@ -28,34 +23,34 @@
   color: $hover-black;
   margin-top: rem-calc(12);
   .user-name {
-    font-weight: $bold;
-    margin-right: rem-calc(43);
-    letter-spacing: rem-calc(1);
+	font-weight: $bold;
+	margin-right: rem-calc(43);
+	letter-spacing: rem-calc(1);
   }
   .login, .logout {
-    transition: all $slow-transition;
-    &:hover {
-      color: $gray-font;
-    }
+	transition: all $slow-transition;
+	&:hover {
+	  color: $gray-font;
+	}
   }
   .login {
-    @include icon(login, 14px, 10px, left, 5px, baseline)
+	@include icon(login, 14px, 10px, left, 5px, baseline)
   }
   .logout {
-    @include icon(logout, 14px, 10px, left, 5px, baseline)
+	@include icon(logout, 14px, 10px, left, 5px, baseline)
   }
   .info {
-    margin-left: rem-calc(18);
-    border: rem-calc(1) solid $gray;
-    border-radius: 50%;
-    text-align: center;
-    width: rem-calc(24);
-    height: rem-calc(24);
-    line-height: rem-calc(24);
-    transition: background $transition;
-    &:hover {
-      background: $gray;
-    }
+	margin-left: rem-calc(18);
+	border: rem-calc(1) solid $gray;
+	border-radius: 50%;
+	text-align: center;
+	width: rem-calc(24);
+	height: rem-calc(24);
+	line-height: rem-calc(24);
+	transition: background $transition;
+	&:hover {
+	  background: $gray;
+	}
   }
 }
 
@@ -66,40 +61,41 @@
   background: $yellow;
   padding: rem-calc(25 18 36);
   .action-holder {
-    width: rem-calc(204);
-    &:first-child {
-      width: rem-calc(424);
-    }
-    & + .action-holder {
-      margin-left: rem-calc(36);
-    }
+	width: rem-calc(204);
+	&:first-child {
+	  width: rem-calc(424);
+	}
+	& + .action-holder {
+	  margin-left: rem-calc(36);
+	}
   }
 }
 
 .action-holder {
   label {
-    display: inline-block;
-    color: $label-color;
-    font-weight: $bold;
-    margin-bottom: rem-calc(4);
-    letter-spacing: rem-calc(1);
+	display: inline-block;
+	color: $label-color;
+	font-weight: $bold;
+	margin-bottom: rem-calc(4);
+	letter-spacing: rem-calc(1);
   }
 }
 
 .main-content-holder {
   padding: rem-calc(25 20 38);
+  overflow: hidden;
 }
 
 .priority-holder {
   padding-bottom: rem-calc(7);
   border-bottom: rem-calc(1) solid $default-border;
   .title {
-    display: inline-block;
-    margin-left: rem-calc(11);
-    font-weight: $bold;
-    letter-spacing: rem-calc(1);
-    color: $label-color;
-    margin-bottom: rem-calc(4);
+	display: inline-block;
+	margin-left: rem-calc(11);
+	font-weight: $bold;
+	letter-spacing: rem-calc(1);
+	color: $label-color;
+	margin-bottom: rem-calc(4);
   }
 }
 
@@ -111,95 +107,95 @@
   display: flex;
   flex-wrap: wrap;
   .label-info {
-    display: inline-block;
-    position: relative;
-    background: $priority-bg;
-    padding: rem-calc(5 18 5 8);
-    font-size: rem-calc(12);
-    font-weight: $bold;
-    color: $priority-color;
-    letter-spacing: rem-calc(.39);
-    border-radius: rem-calc(11);
-    margin: rem-calc(3 4);
-    &.checkbox-holder {
-      background: $priority-bg;
-      cursor: pointer;
-      padding: 0;
-      label {
-        display: inline-block;
-        color: $black;
-        border-radius: rem-calc(11);
-        cursor: pointer;
-        padding: rem-calc(5 8);
-        transition: all $transition;
-      }
-      input {
-        display: none;
-        &:checked + label {
-          background: $yellow;
-          color: $white;
-        }
-      }
-    }
+	display: inline-block;
+	position: relative;
+	background: $priority-bg;
+	padding: rem-calc(5 18 5 8);
+	font-size: rem-calc(12);
+	font-weight: $bold;
+	color: $priority-color;
+	letter-spacing: rem-calc(.39);
+	border-radius: rem-calc(11);
+	margin: rem-calc(3 4);
+	&.checkbox-holder {
+	  background: $priority-bg;
+	  cursor: pointer;
+	  padding: 0;
+	  label {
+		display: inline-block;
+		color: $black;
+		border-radius: rem-calc(11);
+		cursor: pointer;
+		padding: rem-calc(5 8);
+		transition: all $transition;
+	  }
+	  input {
+		display: none;
+		&:checked + label {
+		  background: $yellow;
+		  color: $white;
+		}
+	  }
+	}
   }
   span[data-role='remove'] {
-    position: absolute;
-    top: 50%;
-    right: rem-calc(5);
-    transform: translateY(-50%) rotate(45deg);
-    width: rem-calc(10);
-    height: rem-calc(10);
-    @include hideText;
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: rem-calc(2);
-      height: rem-calc(2);
-      background: $dark-black;
-      opacity: .19;
-    }
-    &:before {
-      width: rem-calc(7);
-    }
-    &:after {
-      height: rem-calc(7);
-    }
+	position: absolute;
+	top: 50%;
+	right: rem-calc(5);
+	transform: translateY(-50%) rotate(45deg);
+	width: rem-calc(10);
+	height: rem-calc(10);
+	@include hideText;
+	&:before, &:after {
+	  content: '';
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  width: rem-calc(2);
+	  height: rem-calc(2);
+	  background: $dark-black;
+	  opacity: .19;
+	}
+	&:before {
+	  width: rem-calc(7);
+	}
+	&:after {
+	  height: rem-calc(7);
+	}
   }
   input {
-    border: 0;
-    background: transparent;
-    width: auto;
-    height: auto;
-    box-shadow: none;
-    padding: rem-calc(0 3);
-    margin: rem-calc(3 4);
-    min-width: rem-calc(100);
+	border: 0;
+	background: transparent;
+	width: auto;
+	height: auto;
+	box-shadow: none;
+	padding: rem-calc(0 3);
+	margin: rem-calc(3 4);
+	min-width: rem-calc(100);
   }
   .other {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    .title-other {
-      display: inline-block;
-      margin: rem-calc(6 4);
-      padding: rem-calc(5 4);
-    }
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	.title-other {
+	  display: inline-block;
+	  margin: rem-calc(6 4);
+	  padding: rem-calc(5 4);
+	}
   }
 }
 
 .tabs-holder {
   .content {
-    max-width: rem-calc(770);
-    margin: 0 auto;
-    padding: rem-calc(0 15);
+	max-width: rem-calc(770);
+	margin: 0 auto;
+	padding: rem-calc(0 15);
   }
   .btn-holder {
-    border-top: rem-calc(1) solid $default-border;
-    padding-top: rem-calc(20);
-    text-align: center;
+	border-top: rem-calc(1) solid $default-border;
+	padding-top: rem-calc(20);
+	text-align: center;
   }
 }
 
@@ -207,59 +203,59 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  margin-top: rem-calc(94);
+  margin-top: rem-calc(64);
   &:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background: $yellow;
-    width: 100%;
-    height: rem-calc(5);
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	background: $yellow;
+	width: 100%;
+	height: rem-calc(5);
   }
   a {
-    transition: background-color $transition;
-    &:hover {
-      background: $yellow;
-    }
+	transition: background-color $transition;
+	&:hover {
+	  background: $yellow;
+	}
   }
   .tab {
-    position: relative;
-    color: $label-color;
-    font-weight: bold;
-    font-size: rem-calc(14);
-    letter-spacing: rem-calc(1);
-    width: rem-calc(15);
-    height: rem-calc(15);
-    border: rem-calc(1) solid $yellow;
-    background-color: $white;
-    border-radius: 50%;
-    z-index: 5;
-    &.current {
-      background: $yellow;
-    }
-    span {
-      position: absolute;
-      left: 50%;
-      top: rem-calc(-30);
-      transform: translateX(-50%);
-    }
+	position: relative;
+	color: $label-color;
+	font-weight: bold;
+	font-size: rem-calc(14);
+	letter-spacing: rem-calc(1);
+	width: rem-calc(15);
+	height: rem-calc(15);
+	//border: rem-calc(1) solid $yellow;
+	//background-color: $white;
+	border-radius: 50%;
+	z-index: 5;
+	&.current {
+	  background: $yellow;
+	}
+	span {
+	  position: absolute;
+	  left: 50%;
+	  top: rem-calc(-30);
+	  transform: translateX(-50%);
+	}
   }
 }
 
 .tabs-content {
   display: flex;
   .col {
-    padding: rem-calc(31 0 75);
-    width: 50%;
-    & + .col {
-      border-left: rem-calc(1) solid $default-border;
-    }
+	padding: rem-calc(31 0 75);
+	width: 50%;
+	& + .col {
+	  border-left: 0.25rem solid $red;
+	}
   }
   .inside {
-    max-width: rem-calc(285);
-    margin: 0 auto;
+	max-width: rem-calc(285);
+	margin: 0 auto;
   }
 }
 
@@ -273,24 +269,24 @@
   border-bottom: rem-calc(1) solid $default-border;
 
   .multi-name {
-    display: inline-block;
-    font-weight: $bold;
-    font-size: rem-calc(11);
-    color: $label-color;
-    margin-bottom: rem-calc(6);
+	display: inline-block;
+	font-weight: $bold;
+	font-size: rem-calc(11);
+	color: $label-color;
+	margin-bottom: rem-calc(6);
   }
   & + .multi-item {
-    margin-top: rem-calc(15);
+	margin-top: rem-calc(15);
   }
 }
 
 .multi-add {
   li {
-    display: flex;
-    align-items: center;
-    & + li {
-      margin-top: rem-calc(6);
-    }
+	display: flex;
+	align-items: center;
+	& + li {
+	  margin-top: rem-calc(6);
+	}
   }
   //.input-part {
   //  width: calc(100% - 32px);
@@ -311,61 +307,61 @@
   //  }
   //}
   .input-part {
-    width: 100%;
+	width: 100%;
   }
   .bootstrap-tagsinput {
-    display: flex;
-    flex-wrap: wrap;
-    margin: rem-calc(0 -4);
-    .label-info {
-      margin: rem-calc(6 4 0);
-      background: $priority-bg;
-      color: $priority-color;
-    }
-    input {
-      order: 1;
-      margin: rem-calc(0 4);
-    }
-    span {
-      order: 2;
-    }
+	display: flex;
+	flex-wrap: wrap;
+	margin: rem-calc(0 -4);
+	.label-info {
+	  margin: rem-calc(6 4 0);
+	  background: $priority-bg;
+	  color: $priority-color;
+	}
+	input {
+	  order: 1;
+	  margin: rem-calc(0 4);
+	}
+	span {
+	  order: 2;
+	}
   }
   .multi-addd-item {
-    display: inline-block;
-    width: 100%;
-    line-height: rem-calc(13);
-    border-radius: rem-calc(3);
-    border: rem-calc(1) solid #e8e8e8;
-    background: $header-border;
-    font-family: $avenir;
-    font-size: rem-calc(10);
-    padding: rem-calc(5 7);
+	display: inline-block;
+	width: 100%;
+	line-height: rem-calc(13);
+	border-radius: rem-calc(3);
+	border: rem-calc(1) solid #e8e8e8;
+	background: $header-border;
+	font-family: $avenir;
+	font-size: rem-calc(10);
+	padding: rem-calc(5 7);
   }
   .action-part {
-    margin-left: rem-calc(7);
+	margin-left: rem-calc(7);
   }
   .multi-add-button {
-    cursor: pointer;
-    outline: none;
-    width: rem-calc(25);
-    height: rem-calc(25);
-    line-height: rem-calc(16);
-    letter-spacing: rem-calc(-0.8);
-    text-align: center;
-    border: rem-calc(1) solid #c5c5c5;
-    background: $white;
-    padding: 0;
-    font-weight: $bold;
-    font-size: rem-calc(14);
-    border-radius: rem-calc(3);
-    transition: box-shadow $fast-transition;
-    &:active {
-      box-shadow: $box-shadow-inset;
-    }
-    &.minus {
-      border: rem-calc(1) solid #e8e8e8;
-      background: $header-border;
-    }
+	cursor: pointer;
+	outline: none;
+	width: rem-calc(25);
+	height: rem-calc(25);
+	line-height: rem-calc(16);
+	letter-spacing: rem-calc(-0.8);
+	text-align: center;
+	border: rem-calc(1) solid #c5c5c5;
+	background: $white;
+	padding: 0;
+	font-weight: $bold;
+	font-size: rem-calc(14);
+	border-radius: rem-calc(3);
+	transition: box-shadow $fast-transition;
+	&:active {
+	  box-shadow: $box-shadow-inset;
+	}
+	&.minus {
+	  border: rem-calc(1) solid #e8e8e8;
+	  background: $header-border;
+	}
   }
 }
 
@@ -373,44 +369,44 @@
   display: flex;
   flex-wrap: wrap;
   .label-info {
-    display: inline-block;
-    position: relative;
-    background: $yellow;
-    padding: rem-calc(5 18 5 8);
-    font-size: rem-calc(12);
-    //font-weight: $bold;
-    font-weight: 400;
-    color: $white;
-    letter-spacing: rem-calc(.39);
-    border-radius: rem-calc(11);
-    margin: rem-calc(6 4);
+	display: inline-block;
+	position: relative;
+	background: $yellow;
+	padding: rem-calc(5 18 5 8);
+	font-size: rem-calc(12);
+	//font-weight: $bold;
+	font-weight: 400;
+	color: $white;
+	letter-spacing: rem-calc(.39);
+	border-radius: rem-calc(11);
+	margin: rem-calc(6 4);
   }
   span[data-role='remove'] {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    right: rem-calc(5);
-    transform: translateY(-50%) rotate(45deg);
-    width: rem-calc(10);
-    height: rem-calc(10);
-    @include hideText;
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: rem-calc(2);
-      height: rem-calc(2);
-      background: $dark-black;
-      opacity: .19;
-    }
-    &:before {
-      width: rem-calc(7);
-    }
-    &:after {
-      height: rem-calc(7);
-    }
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	right: rem-calc(5);
+	transform: translateY(-50%) rotate(45deg);
+	width: rem-calc(10);
+	height: rem-calc(10);
+	@include hideText;
+	&:before, &:after {
+	  content: '';
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  width: rem-calc(2);
+	  height: rem-calc(2);
+	  background: $dark-black;
+	  opacity: .19;
+	}
+	&:before {
+	  width: rem-calc(7);
+	}
+	&:after {
+	  height: rem-calc(7);
+	}
   }
 }
 
@@ -418,61 +414,70 @@
   margin-top: rem-calc(36);
   width: 100%;
   .type {
-    & + .type {
-      margin-top: rem-calc(20);
-    }
-    .title {
-      font-size: rem-calc(13);
-      font-weight: $bold;
-      letter-spacing: rem-calc(1);
-      color: $label-color;
-      margin-bottom: rem-calc(15);
-    }
+	& + .type {
+	  margin-top: rem-calc(20);
+	}
+	.title {
+	  font-size: rem-calc(13);
+	  font-weight: $bold;
+	  letter-spacing: rem-calc(1);
+	  color: $label-color;
+	  margin-bottom: rem-calc(15);
+	}
   }
   .row {
-    border-bottom: rem-calc(1) solid $default-border;
-    padding-bottom: rem-calc(6);
-    margin-bottom: rem-calc(6);
-    margin-left: rem-calc(10);
-    display: flex;
-    &:last-of-type {
-      border-bottom: 0;
-    }
+	border-bottom: rem-calc(1) solid $default-border;
+	padding-bottom: rem-calc(6);
+	margin-bottom: rem-calc(6);
+	margin-left: rem-calc(10);
+	display: flex;
+	&:last-of-type {
+	  border-bottom: 0;
+	}
   }
   .row-name {
-    font-size: rem-calc(12);
-    letter-spacing: rem-calc(1);
-    color: $label-color;
-    padding-right: rem-calc(15);
-    flex-basis: rem-calc(155);
+	font-size: rem-calc(12);
+	letter-spacing: rem-calc(1);
+	color: $label-color;
+	padding-right: rem-calc(15);
+	flex-basis: rem-calc(155);
   }
   .choice-holder {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: calc(100% - 155px);
+	display: flex;
+	flex-wrap: wrap;
+	flex-basis: calc(100% - 155px);
 
   }
   label {
-    outline: none;
-    border-radius: rem-calc(11);
-    border: rem-calc(1) solid $border-color;
-    padding: rem-calc(6 13);
-    display: inline-block;
-    cursor: pointer;
-    background: $white;
-    transition: all $transition;
+	outline: none;
+	border-radius: rem-calc(11);
+	border: rem-calc(1) solid $border-color;
+	padding: rem-calc(6 13);
+	display: inline-block;
+	cursor: pointer;
+	//background: $white;
+	transition: all $transition;
   }
   input {
-    display: none;
-    &:checked + label {
-      //background: #eee;
-      background: $yellow;
-      color: $white;
-      border-color: $yellow;
-    }
+	display: none;
+
+	&:not(:checked) + label {
+	  background: $white !important;
+	}
+
+	&:checked + label {
+	  //background: #eee;
+	  //background: $yellow;
+	  color: $white;
+	  border-color: $yellow;
+
+	  &.pr-val-1 {
+		color: inherit;
+	  }
+	}
   }
   .pr-choice {
-    margin: rem-calc(0 5 3);
+	margin: rem-calc(0 5 3);
   }
 }
 
@@ -481,73 +486,189 @@
   max-width: rem-calc(650);
   margin: rem-calc(54) auto rem-calc(20);
   .data-holder {
-    &+.data-holder {
-      margin-top: rem-calc(23);
-    }
+	& + .data-holder {
+	  margin-top: rem-calc(23);
+	}
   }
   span {
-    display: inline-block;
-    margin: rem-calc(0 10);
+	display: inline-block;
+	margin: rem-calc(0 10);
   }
   .title {
-    font-weight: $bold;
-    color: $label-color;
-    margin: rem-calc(0 0 8 100);
-    font-size: rem-calc(13);
+	font-weight: $bold;
+	color: $label-color;
+	margin: rem-calc(0 0 8 100);
+	font-size: rem-calc(13);
   }
   label {
-    font-size: rem-calc(12);
-    letter-spacing: rem-calc(1);
-    font-weight: 500;
-    flex-basis: rem-calc(100);
-    margin-right: rem-calc(11);
-    text-align: right;
-    white-space: nowrap;
+	font-size: rem-calc(12);
+	letter-spacing: rem-calc(1);
+	font-weight: 500;
+	flex-basis: rem-calc(100);
+	margin-right: rem-calc(11);
+	text-align: right;
+	white-space: nowrap;
   }
+
+  .fw-divs {
+	label {
+	  + div {
+		width: 100%;
+	  }
+	}
+  }
+
   .action-holder {
-    display: flex;
-    align-items: center;
-    &+.action-holder {
-      margin-top: rem-calc(5);
-    }
+	display: flex;
+	align-items: center;
+	& + .action-holder {
+	  margin-top: rem-calc(5);
+	}
+  }
+
+  .area-holder {
+	.action-holder {
+	  margin: rem-calc(0 0 0 100);
+
+	  & > div {
+		width: 100%;
+	  }
+	}
   }
   textarea {
-    margin: rem-calc(0 0 0 100);
+	width: 100%;
   }
 }
 
 .invitation-block {
   max-width: rem-calc(595);
-  margin: rem-calc(100) auto rem-calc(180);
+  margin: rem-calc(20) auto rem-calc(30);
   p {
-    font-size: rem-calc(13);
-    letter-spacing: rem-calc(1);
-    margin-bottom: rem-calc(24);
-    line-height: 1.5;
+	font-size: rem-calc(13);
+	letter-spacing: rem-calc(1);
+	margin-bottom: rem-calc(24);
+	line-height: 1.5;
   }
   .title {
-    font-weight: $bold;
-    font-size: rem-calc(13);
-    letter-spacing: rem-calc(1);
-    margin-bottom: rem-calc(10);
+	font-weight: $bold;
+	font-size: rem-calc(13);
+	letter-spacing: rem-calc(1);
+	margin-bottom: rem-calc(10);
   }
   button.green-btn, .button.green-btn {
-    min-width: auto;
-    margin-left: rem-calc(18);
-    flex-basis: rem-calc(189);
+	min-width: auto;
+	margin-left: rem-calc(18);
+	flex-basis: rem-calc(189);
   }
   input {
-    flex-basis: calc(100% - 207px);
+	flex-basis: calc(100% - 207px);
   }
   .action-holder {
-    display: flex;
-    &+.action-holder {
-      margin-top: rem-calc(6);
-    }
+	display: flex;
+
+	&.reverse {
+	  flex-direction: row-reverse;
+	}
+	& + .action-holder {
+	  margin-top: rem-calc(6);
+	}
   }
 }
 
 .graph-holder {
   padding: rem-calc(35 0);
   border-bottom: rem-calc(1) solid $default-border;
+}
+
+.noprint {
+  @media only print {
+	display: none;
+  }
+}
+
+.priorities.bootstrap-tagsinput {
+  flex-direction: column;
+}
+
+.send {
+  .for-not-invited {
+	display: none;
+  }
+
+  &.sent {
+	.for-not-invited {
+	  display: initial;
+	}
+
+	.for-invited {
+	  display: none;
+	}
+  }
+
+}
+
+.round-image-wrapper {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+
+  &.small{
+	width: 50px;
+	height: 50px;
+  }
+
+   img {
+	 min-width: 100%;
+	 min-height: 100%;
+	 width: 100%;
+	 height: auto;
+	 object-fit: cover;
+  }
+}
+
+.edit-intro [data-step]:not([data-step=""])[data-intro]:not([data-intro=""]) {
+  position: relative;
+
+  &:after {
+	display: block;
+	content: attr(data-step);
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: white;
+	text-align: center;
+	line-height: 30px;
+	color: red;
+	font-weight: bold;
+	border-radius: 50%;
+	border: 2px solid red;
+	top: 0;
+	right: 0;
+	pointer-events: none;
+  }
+}
+
+.edit-page {
+  [id^="pe_"] {
+	position: relative;
+
+	&:after {
+	  content: "";
+	  position: absolute;
+	  display: block;
+	  width: 10px;
+	  height: 10px;
+	  background: white;
+	  border-radius: 50%;
+	  border: 2px solid red;
+	  top: 0;
+	  right: 0;
+	  pointer-events: none;
+	}
+  }
+
+  .DomOutline_label {
+	display: none;
+  }
 }

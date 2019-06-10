@@ -1,21 +1,27 @@
 // Reset
+@import "bootstrap/bootstrap";
+@import "bootstrap/bootstrap-grid";
 @import "reset";
-@import "fonts";
+@import "unit/fonts/fonts";
 
 //Unit
-@import "unit/_unit";
-@import "unit/_value";
-@import "unit/_color";
-@import "unit/_selector";
-@import "unit/_flex";
-@import "unit/_breakpoint";
-@import "unit/_mixin";
+@import "unit/unit";
+@import "unit/value";
+@import "unit/variables";
+@import "unit/selector";
+@import "unit/flex";
+@import "unit/breakpoint";
+@import "unit/mixin";
+@import "unit/file-input";
 
 // Styles
 @import "default-class";
+@import "list-group";
 
 // Pages
-@import "pages/_priority-page";
+@import "pages/priority-page";
+@import "pages/priorities-list";
+@import "pages/priority-info";
 
 // Common styles
 @import "_common";
