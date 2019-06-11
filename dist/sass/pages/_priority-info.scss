@@ -339,6 +339,9 @@
   mark {
     color: $yellow;
   }
+  strong {
+    font-weight: $bold;
+  }
   .why-we {
     margin-top: rem-calc(58);
     padding-bottom: rem-calc(60);
@@ -467,6 +470,72 @@
       letter-spacing: rem-calc(1.55);
       margin-bottom: rem-calc(12);
       font-size: rem-calc(33);
+    }
+  }
+
+  .solutions-intro {
+    margin-bottom: rem-calc(95);
+    .button, button {
+      background: $green;
+      width: rem-calc(220);
+      text-align: center;
+      margin-top: rem-calc(30);
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    li {
+      list-style-type: disc;
+      margin-left: 22px;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 0;
+      margin-right: 0;
+      letter-spacing: rem-calc(.66);
+      line-height: rem-calc(14);
+      font-size: rem-calc(14);
+      >* {
+        width: 100%;
+        max-width: rem-calc(350);
+        @include breakpoint(large) {
+          width: 50%;
+          max-width: none;
+        }
+        &:first-of-type {
+         max-width: rem-calc(380);
+        }
+        &+* {
+          margin-top: rem-calc(20);
+          @include breakpoint(large) {
+            margin-top: 0;
+            margin-left: rem-calc(70);
+          }
+        }
+      }
+      &:first-of-type {
+        border-bottom: rem-calc(1) solid $light-gray;
+        padding-bottom: rem-calc(50);
+        margin-bottom: rem-calc(50);
+        font-size: rem-calc(16);
+        letter-spacing: rem-calc(.75);
+        line-height: rem-calc(20);
+        p {
+          color: $purple;
+        }
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+    p {
+      margin-top: rem-calc(15);
+      &:first-of-type {
+        margin-top: 0;
+      }
     }
   }
 }
