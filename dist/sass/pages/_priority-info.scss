@@ -752,12 +752,72 @@
   .background-block {
     margin-top: rem-calc(65);
     padding-bottom: rem-calc(60);
-    @include breakpoint(medium) {
+    font-size: rem-calc(18);
+    letter-spacing: rem-calc(.63);
+    line-height: 1.3;
+    @include breakpoint(large) {
       padding-bottom: rem-calc(118);
-
+    }
+    h1, .h1 {
+      margin-bottom: 0;
+    }
+    .link {
+      color: $purple;
+      font-size: rem-calc(16);
+      letter-spacing: rem-calc(.56);
+      margin-top: rem-calc(12);
+      a {
+        text-decoration: underline;
+        &:hover {
+          color: $purple;
+        }
+      }
     }
     .content {
-      padding-left: rem-calc(22);
+      @include breakpoint(large) {
+        padding-left: rem-calc(22);
+      }
+    }
+    img {
+      width: 100%;
+      max-width: rem-calc(430);
+      height: auto;
+    }
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      &:first-of-type {
+        .text-block {
+          margin-top: rem-calc(38);
+
+        }
+      }
+      >* {
+        &:first-of-type {
+          max-width: rem-calc(413);
+        }
+        &:last-of-type {
+          max-width: rem-calc(430);
+          margin-top: rem-calc(25);
+          @include breakpoint(large) {
+            margin-top: 0;
+            margin-left: rem-calc(15);
+          }
+        }
+      }
+      &+.row {
+        margin-top: rem-calc(25);
+        @include breakpoint(large) {
+          margin-top: rem-calc(52);
+        }
+      }
+    }
+    li {
+      margin-left: rem-calc(28);
+      list-style-type: disc;
     }
   }
 
