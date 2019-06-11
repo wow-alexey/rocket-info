@@ -47,20 +47,9 @@
   margin-left: auto;
   margin-right: auto;
   @include breakpoint(medium){
+    padding: 0;
     max-width: rem-calc(940);
   }
-  @include breakpoint(large){
-    max-width: rem-calc(1024);
-  }
-  @include breakpoint(xlarge){
-    max-width: rem-calc(1100);
-  }
-  //@include breakpoint(xxlarge){
-  //  max-width: rem-calc(1400);
-  //}
-  //@include breakpoint(xxxlarge){
-  //  max-width: rem-calc(1650);
-  //}
 }
 
 @mixin hideText {

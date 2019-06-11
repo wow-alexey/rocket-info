@@ -3,18 +3,119 @@
 })
 <body class="priority-info">
 @@include('templates/header.html')
-<!--<div class="container has-sidebar">-->
-    <!--@@include('templates/aside.html')-->
-    <!--<main>-->
-        <!--@@include('templates/top-form.html')-->
-        <!--<div class="main-content-holder">-->
-            <!--@@include('templates/priority-block.html')-->
-            <!--<div class="tabs-holder">-->
-                <!--@@include('templates/step-1.html')-->
-                <!--@@include('templates/step-2.html')-->
-                <!--@@include('templates/step-3.html')-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</main>-->
-<!--</div>-->
+<main>
+    <div class="container">
+        <div class="intro-block">
+            <h1 class="has-line">Build a better backlog</h1>
+            <div class="content">
+                <div class="column">
+                    <p>PriorityRocket is a prioritization tool for teams of all sizes. Share and score the things that
+                        need to get done. Create a clear understanding of what priorities drive value and which one will
+                        waste time and money. Across organizations with data-driven accuracy; PriorityRocket takes the
+                        uncertainty out of the toughest backlogs, turning the work into cashflow faster.</p>
+                    <p>We are in testing and would love for you to join us.</p>
+                    <div class="btn-holder">
+                        <a href="#" class="button">Start Prioritizing</a>
+                    </div>
+                    <!--<div class="image-holder" style="background-image: url('img/bitmap.jpg')">-->
+                    <!--image-->
+                    <!--</div>-->
+                    <img src="img/bitmap.jpg" alt="image">
+                </div>
+                <div class="column">
+                    <!--<div class="image-holder" style="background-image: url('img/gether.jpg')">-->
+                    <!--image-->
+                    <!--</div>-->
+                    <img src="img/gether.jpg" alt="image">
+
+                </div>
+            </div>
+        </div>
+        <div class="score-task">
+            <h1 class="has-line align-center">Score Any Task in Under 3 Minutes</h1>
+            <div class="content">
+                <div class="column">
+                    <img src="img/graph.png" alt="image">
+                </div>
+                <div class="column">
+                    <div class="description">
+                        <p>Shortcut the time and effort it takes to get teams on the same page.</p>
+                        <p>PriorityRocket's score is a "priority hack"; the most efficient way to communicate a deep
+                            understanding of users needs.</p>
+                        <div class="btn-holder">
+                            <a href="#" class="button">Join The Beta Test</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="methods">
+            <div class="bg-holder" style="background-image: url('img/man.png')">
+                <span class="h1">
+                    &nbsp;<mark>Accelerate</mark> the methods you depend on: <br>&nbsp;Scrum, Agile, Lean, Lean Star-up, SixSigma and more...&nbsp;</span>
+            </div>
+        </div>
+        <div class="why-we">
+            <h1 class="align-center">Why PriorityRocket</h1>
+            <ul>
+                <li>
+                    <div class="icon" style="background-image: url('img/timer.png')">icon</div>
+                    <span class="title">Free Up Time</span>
+                    <p>The wrong priorities waste time, money and resources. PriorityRocket compresses time by focusing
+                        teams on the highest value efforts.</p>
+                </li>
+                <li>
+                    <div class="icon" style="background-image: url('img/fewer.png')">icon</div>
+                    <span class="title">Fewer Meetings</span>
+                    <p>Using a value-driven Priority Score enables rapid understanding and benchmarking of priorities
+                        from all points of view.</p>
+                </li>
+                <li>
+                    <div class="icon" style="background-image: url('img/cash.png')">icon</div>
+                    <span class="title">Improve Cashflow</span>
+                    <p>It takes minutes to learn and moments to use to focus on the highest value work. The right work
+                        done first delivers better returns for work of all types.</p>
+                </li>
+            </ul>
+            <div class="btn-holder">
+                <a href="#" class="button">Join The Beta Test</a>
+            </div>
+        </div>
+    </div>
+    <div class="contact-us">
+        <div class="container">
+            <div class="form-holder">
+                <div class="short-info">
+                    <div class="section-name">Contact us</div>
+                    <span>Start Prioritizing Today</span>
+                    <a href="mailto: info@priorityrocket.com">info@priorityrocket.com</a>
+                </div>
+                <form action="#">
+                    <div class="col">
+                        <div class="form-group">
+                            <input type="text" class="name" placeholder="Name *">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="email" placeholder="Email *">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="subject" placeholder="Subject *">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="phone" placeholder="Phone">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="address" placeholder="Address">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="message"></textarea>
+                    </div>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
 @@include('templates/footer.html')
