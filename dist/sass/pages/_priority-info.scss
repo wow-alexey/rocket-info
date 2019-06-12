@@ -748,7 +748,6 @@
       }
     }
   }
-
   .background-block {
     margin-top: rem-calc(65);
     padding-bottom: rem-calc(60);
@@ -820,7 +819,6 @@
       list-style-type: disc;
     }
   }
-
   .skills-block {
     border-top: rem-calc(9) solid $green;
     margin-bottom: rem-calc(115);
@@ -854,6 +852,87 @@
       align-items: flex-start;
       @include breakpoint(medium) {
         margin-left: rem-calc(20);
+      }
+    }
+  }
+
+  .intro-contact {
+    h1, .h1 {
+      margin-bottom: 0;
+    }
+    .col {
+      padding: 0;
+      @include breakpoint(large) {
+        display: flex;
+        justify-content: space-between;
+      }
+      >* {
+        @include breakpoint(large) {
+          width: calc(50% - 8px);
+        }
+      }
+    }
+    .content {
+      padding: rem-calc(42 0 71);
+      @include breakpoint(medium) {
+        display: flex;
+        padding: rem-calc(42 25 71);
+      }
+      @include breakpoint(large) {
+        padding: rem-calc(42 50 71);
+      }
+      button, .button {
+        background: $green;
+        text-align: center;
+      }
+    }
+    form {
+      .button, button {
+        width: 100%;
+      }
+      input {
+        @include breakpoint(medium) {
+          min-width: rem-calc(260);
+        }
+        @include breakpoint(large) {
+          min-width: auto;
+        }
+      }
+    }
+    .column {
+      @include breakpoint(medium) {
+        width: 50%;
+      }
+      &:first-of-type {
+        margin-bottom: rem-calc(25);
+        @include breakpoint(medium) {
+          margin-bottom: 0;
+          margin-right: rem-calc(65);
+        }
+      }
+    }
+    .text-info {
+      margin-top: rem-calc(5);
+      button, .button {
+        color: $white;
+        background: $deep-red;
+        margin-top: rem-calc(20);
+        max-width: rem-calc(220);
+      }
+      .title {
+        font-size: rem-calc(17);
+        letter-spacing: rem-calc(.8);
+        margin-bottom: rem-calc(15);
+        color: $black;
+
+      }
+      a {
+        font-weight: $bold;
+        font-size: rem-calc(15);
+        letter-spacing: rem-calc(.7);
+        display: block;
+        color: $black;
+        margin-top: rem-calc(3);
       }
     }
   }

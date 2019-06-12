@@ -1,0 +1,49 @@
+@@include('templates/head.html', {
+"title": "Contact us | Rocket"
+})
+<body class="priority-info">
+@@include('templates/header.html')
+<main>
+    <div class="container">
+        <div class="intro-contact">
+            <div class="h1 has-line">Contact us</div>
+            <div class="content">
+                <div class="column">
+                    <form action="#">
+                        <div class="col">
+                            <div class="form-group">
+                                <input type="text" class="name" placeholder="Name *">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="email" placeholder="Email *">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="subject" placeholder="Subject *">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="phone" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="address" placeholder="Address">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Message"></textarea>
+                        </div>
+                        <button type="submit">Send</button>
+                    </form>
+
+                </div>
+                <div class="column">
+                    <div class="text-info">
+                        <div class="title">Start Prioritizing Today</div>
+                        <a href="mailto:info@priorityrocket.com">info@priorityrocket.com</a>
+                        <a href="mailto:enterprise@priorityrocket.com">enterprise@priorityrocket.com</a>
+                        <a href="#" class="button">Join The Beta Test</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+@@include('templates/footer.html')
